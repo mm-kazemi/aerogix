@@ -1,12 +1,16 @@
 import "./App.css";
-import {Header} from "./components/Header/Header.tsx";
-import Hero from "./components/Hero/hero.tsx";
+import { Header } from "./components/Header/Header.tsx";
+import Hero from "./components/Hero/Hero.tsx";
+import Services from "./components/Services/Services.tsx";
 
 function App() {
   return (
     <>
-        <Header />
-      <main className="App"><Hero/></main>
+      <Header />
+      <main className="App">
+        <Hero />
+        <Services />
+      </main>
       <footer></footer>
     </>
   );

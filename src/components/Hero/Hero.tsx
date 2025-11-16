@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 
 import Button from "../Button/button.tsx";
 
-import styles from "./hero.module.css";
+import styles from "./Hero.module.css";
 
 function Hero(): ReactElement {
   return (
