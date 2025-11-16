@@ -1,20 +1,42 @@
 .hero {
-  display: grid;
-  gap: 3.75rem;
-  h1 {
-    color: var(--color-primary);
-    font-weight: 800;
-    font-size: 4.25rem;
-    line-height: 1.3;
-    max-inline-size: 50rem;
+  position: relative;
+  .background-image {
+    display: grid;
+    grid-template-areas: "area";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-end: 0;
+    z-index: -1;
+    img {
+      grid-area: area;
+    }
+    .overlay {
+      grid-area: area;
+      background-image: linear-gradient(to left, transparent, white);
+    }
   }
-  P {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    max-inline-size: 36rem;
-  }
-  .actions {
-    display: flex;
-    gap: 1rem;
+  .writings {
+    display: grid;
+    gap: 3.75rem;
+    align-content: center;
+    min-block-size: 42.5rem;
+    padding-inline-start: max(1rem, (100% - 75rem) / 2);
+
+    h1 {
+      color: var(--color-primary);
+      font-weight: 800;
+      font-size: 4.25rem;
+      line-height: 1.3;
+      max-inline-size: 50rem;
+    }
+    P {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      max-inline-size: 36rem;
+    }
+    .actions {
+      display: flex;
+      gap: 1rem;
+    }
   }
 }
