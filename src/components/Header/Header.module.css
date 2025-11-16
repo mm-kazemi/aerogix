@@ -1,3 +1,20 @@
 .header {
+  .logo {
+    img {
+    }
+  }
 
+  nav {
+    ul {
+      li {
+        a {
+        }
+      }
+    }
+  }
+
+  .action {
+    button {
+    }
+  }
 }

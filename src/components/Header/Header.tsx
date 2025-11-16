@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 export function Header() {
   return (
     <header className={styles.header}>
-      <div className="logo">
+      <div className={styles.logo}>
         <img src={"./public/assets/logos/Logo.svg"} alt={"Aerogix Logo"} />
       </div>
       <nav>
@@ -25,7 +25,7 @@ export function Header() {
           </li>
         </ul>
       </nav>
-      <div className="actio">
+      <div className={styles.action}>
         <button>Log In</button>
         <button>Sign Up</button>
       </div>
