@@ -1,0 +1,28 @@
+.button {
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &.solid {
+    background-color: var(--color-primary);
+    color: var(--color-gray-98);
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary-hover);
+    }
+  }
+
+  &.outline {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: var(--color-gray-98);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary-fade);
+    }
+  }
+}

@@ -1,6 +1,10 @@
+import type { ReactElement } from "react";
+
+import Button from "../Button/button.tsx";
+
 import styles from "./Header.module.css";
 
-export function Header() {
+export function Header(): ReactElement {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -25,9 +29,9 @@ export function Header() {
           </li>
         </ul>
       </nav>
-      <div className={styles.action}>
-        <button>Log In</button>
-        <button>Sign Up</button>
+      <div className={styles.actions}>
+        <Button variant={"solid"}>Log In</Button>
+        <Button variant={"outline"}>Sign Up</Button>
       </div>
     </header>
   );
