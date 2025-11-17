@@ -1,17 +1,17 @@
-import { type PropsWithChildren, type ReactElement } from "react";
+import {type ComponentProps, type ReactElement} from "react";
 
 import styles from "./button.module.css";
 import clsx from "clsx";
 
 export type Variant = "solid" | "outline";
 
-type Props = PropsWithChildren & {
+type Props = ComponentProps<"button"> & {
   variant: Variant;
 };
 
-function Button({ children, variant = "solid" }: Props): ReactElement {
+function Button({className ,children, variant = "solid", ...rest }: Props): ReactElement {
   return (
-    <button className={clsx(styles.button, styles[variant])}>{children}</button>
+    <button className={clsx(className, styles.button, styles[variant])} {...rest}>{children}</button>
   );
 }
 
