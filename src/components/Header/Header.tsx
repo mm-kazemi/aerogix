@@ -1,19 +1,24 @@
-import type { ReactElement } from "react";
+import { ReactElement } from "react";
 
-import Button from "../Button/button.tsx";
+import Button, { Variant } from "../Button/Button.tsx";
 
 import styles from "./Header.module.css";
+import MingcuteMenuLine from "../../icons/MingcuteMenuLine.tsx";
 
-export function Header(): ReactElement {
+export default function Header(): ReactElement {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <img src={"./public/assets/logos/Logo.svg"} alt={"Aerogix Logo"} />
-      </div>
+      <img
+        className={styles.logo}
+        src="/assets/logos/logo.png"
+        alt="Swiftlogix Logo"
+      />
       <nav>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="#" className={styles.active}>
+              Home
+            </a>
           </li>
           <li>
             <a href="#">Services</a>
@@ -25,13 +30,16 @@ export function Header(): ReactElement {
             <a href="#">Track Shipment</a>
           </li>
           <li>
-            <a href="#">About US</a>
+            <a href="#">About Us</a>
           </li>
         </ul>
       </nav>
       <div className={styles.actions}>
-        <Button variant={"solid"}>Log In</Button>
-        <Button variant={"outline"}>Sign Up</Button>
+        <Button>Log In</Button>
+        <Button variant={Variant.OUTLINE}>Sign Up</Button>
+      </div>
+      <div className={styles.hamburger}>
+        <MingcuteMenuLine />
       </div>
     </header>
   );

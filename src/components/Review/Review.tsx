@@ -1,9 +1,9 @@
-import { type ReactElement } from "react";
+import { ReactElement } from "react";
 
 import styles from "./Review.module.css";
-import Button from "../Button/button.tsx";
+import Button from "../Button/Button.tsx";
 
-function Review(): ReactElement {
+export default function Review(): ReactElement {
   return (
     <div className={styles.review}>
       <div className={styles.void}></div>
@@ -22,11 +22,10 @@ function Review(): ReactElement {
         </p>
         <img className={styles.quote} src="/assets/images/quote.svg" alt="" />
       </div>
+
       <img className={styles.van} src="/assets/images/van.png" alt="" />
 
       <Button className={styles.button}>Get a Free Quote</Button>
     </div>
   );
 }
-
-export default Review;

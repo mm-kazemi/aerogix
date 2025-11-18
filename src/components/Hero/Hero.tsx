@@ -1,14 +1,13 @@
-import type { ReactElement } from "react";
-
-import Button from "../Button/button.tsx";
+import { ReactElement } from "react";
 
 import styles from "./Hero.module.css";
+import Button, { Variant } from "../Button/Button.tsx";
 
-function Hero(): ReactElement {
+export default function Hero(): ReactElement {
   return (
     <div className={styles.hero}>
       <div className={styles["background-image"]}>
-        <img src={"../.././assets/images/hero.png"} alt={"Hero Image"} />
+        <img src="/assets/images/hero.png" alt="" />
         <div className={styles.overlay}></div>
       </div>
       <div className={styles.writings}>
@@ -18,12 +17,10 @@ function Hero(): ReactElement {
           from one platform.
         </p>
         <div className={styles.actions}>
-          <Button variant={"solid"}>Get a Free Quote</Button>
-          <Button variant={"outline"}>Learn More</Button>
+          <Button>Get a Free Quote</Button>
+          <Button variant={Variant.OUTLINE}>Learn More</Button>
         </div>
       </div>
     </div>
   );
 }
-
-export default Hero;

@@ -1,18 +1,30 @@
-import {type ComponentProps, type ReactElement} from "react";
+import { ComponentProps, ReactElement } from "react";
 
-import styles from "./button.module.css";
 import clsx from "clsx";
 
-export type Variant = "solid" | "outline";
+import styles from "./Button.module.css";
 
-type Props = ComponentProps<"button"> & {
-  variant: Variant;
-};
-
-function Button({className ,children, variant = "solid", ...rest }: Props): ReactElement {
-  return (
-    <button className={clsx(className, styles.button, styles[variant])} {...rest}>{children}</button>
-  );
+export enum Variant {
+  SOLID = "solid",
+  OUTLINE = "outline",
 }
 
-export default Button;
+type Props = ComponentProps<"button"> & {
+  variant?: Variant;
+};
+
+export default function Button({
+  className,
+  children,
+  variant = Variant.SOLID,
+  ...rest
+}: Props): ReactElement {
+  return (
+    <button
+      className={clsx(className, styles.button, styles[variant])}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+}

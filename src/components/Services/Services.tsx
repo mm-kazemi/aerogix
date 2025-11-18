@@ -1,13 +1,12 @@
-import type { ReactElement } from "react";
-
-import ServiceCard from "../ServiceCard/ServiceCard.tsx";
+import { ReactElement } from "react";
 
 import styles from "./Services.module.css";
+import ServiceCard from "../ServiceCard/ServiceCard.tsx";
 import MingcuteTimeFill from "../../icons/MingcuteTimeFill.tsx";
 import MingcuteComputerFill from "../../icons/MingcuteComputerFill.tsx";
 import MingcuteChartBarFill from "../../icons/MingcuteChartBarFill.tsx";
 
-function Services(): ReactElement {
+export default function Services(): ReactElement {
   return (
     <div className={styles.services}>
       <h2>
@@ -39,5 +38,3 @@ function Services(): ReactElement {
     </div>
   );
 }
-
-export default Services;
